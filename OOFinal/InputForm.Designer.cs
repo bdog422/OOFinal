@@ -1,6 +1,6 @@
 ﻿namespace OOFinal
 {
-    partial class Form1
+    partial class InputForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PlayerNameInputBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 11);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(607, 233);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(79, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Enter your Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // PlayerNameInputBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(136, 298);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.PlayerNameInputBox.Location = new System.Drawing.Point(65, 53);
+            this.PlayerNameInputBox.Name = "PlayerNameInputBox";
+            this.PlayerNameInputBox.Size = new System.Drawing.Size(132, 22);
+            this.PlayerNameInputBox.TabIndex = 1;
+            this.PlayerNameInputBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(381, 298);
+            this.button1.Location = new System.Drawing.Point(82, 82);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 24);
+            this.button1.Size = new System.Drawing.Size(87, 33);
             this.button1.TabIndex = 2;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // InputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 414);
+            this.ClientSize = new System.Drawing.Size(282, 127);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.PlayerNameInputBox);
+            this.Controls.Add(this.label1);
+            this.Name = "InputForm";
+            this.Text = "InputForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,9 +78,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox PlayerNameInputBox;
     }
 }
-
