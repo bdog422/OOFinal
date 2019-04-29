@@ -11,9 +11,11 @@ namespace Engine
         public int Karma { get; set; }
         public string Name { get; set; }
 
-        public Player(int Health, int Damage, int Resistance) : base(Health, Damage, Resistance)
+        public Player(int Health, int Damage, int Resistance, int ArmorID, int WeaponID) : base(Health, Damage, Resistance, ArmorID, WeaponID)
         {
             Karma = 0;
+            ArmorID = 0;
+            WeaponID = 0;
         }
     }
 }

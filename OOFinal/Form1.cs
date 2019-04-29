@@ -20,7 +20,7 @@ namespace OOFinal
         public Form1()
         {
             InitializeComponent();
-            player = new Player(100, 20, 10);
+            player = new Player(100, 20, 10, 0, 0);
             quests = new Quest();
 
             GetNameInput();
@@ -111,7 +111,23 @@ namespace OOFinal
                     "has become second nature to immediately swallow any drink brought to you." + Environment.NewLine +
                     "Eventually the Dwarf could no longer bring the glass to his lips and you win!" + Environment.NewLine +
                     "You win a helmet for the coming fight and the pride of out drinking a dwarf!" + Environment.NewLine + "( Press continue to continue )";
+                if (player.armor.ArmorID == 1)
+                    player.armor.ArmorID = 3;
+                else
+                    player.armor.ArmorID = 2;
 
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 17)
+            {
+                textBox1.Text = "The dwarf observes your movements and sees that you are barely standing." + Environment.NewLine +
+                    "He mulls over his thoughts for a second then proclaims 'You know what kid, this was the most fun I'v had in a decade." +
+                    " Even though you didn't win you can borrow my helmet for the fight. Stay safe.'" + Environment.NewLine + "( Press continue to continue )";
+                if (player.armor.ArmorID == 1)
+                    player.armor.ArmorID = 3;
+                else
+                    player.armor.ArmorID = 2;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -119,6 +135,10 @@ namespace OOFinal
             {
                 textBox1.Text = "Luckily for you, the Dwarf already fell asleep with half of his drink left." + Environment.NewLine +
                     "You win the contest and gain a helmet for the upcoming battle!" + Environment.NewLine + "( Press continue to continue )";
+                if (player.armor.ArmorID == 1)
+                    player.armor.ArmorID = 3;
+                else 
+                    player.armor.ArmorID = 2;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -505,7 +525,7 @@ namespace OOFinal
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
-            ///////// End of quest 4
+            ///////// End of quest 3
 
             else if (questCounter + comboBox1.SelectedIndex == 4)
             {
@@ -706,6 +726,11 @@ namespace OOFinal
                 textBox1.Text = "It takes a few attempts but you manage to break and jump out the 2nd story window." + Environment.NewLine +
                     "You are sporting a sprained ankle, but you get away safely. You meet the shadowy figure and he gives you " +
                     "the gauntlets for a job well done." + Environment.NewLine + "( Press continue to continue )";
+                if (player.armor.ArmorID == 2)
+                    player.armor.ArmorID = 3;
+                else
+                    player.armor.ArmorID = 1;
+
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -713,6 +738,10 @@ namespace OOFinal
             {
                 textBox1.Text = "You crash into two guards who drag you to jail." + Environment.NewLine +
                     "They lock you up, but the shadowy figure breaks you out and gives you the gauntlets!" + Environment.NewLine + "( Press continue to continue )";
+                if (player.armor.ArmorID == 2)
+                    player.armor.ArmorID = 3;
+                else
+                    player.armor.ArmorID = 1;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -720,6 +749,10 @@ namespace OOFinal
             {
                 textBox1.Text = "The Magistrate is shocked that someone would hire you to take his life." + Environment.NewLine +
                     "He shoves a pair of gauntlets int your arms and demands that you leave." + Environment.NewLine + "( Press continue to continue )";
+                if (player.armor.ArmorID == 2)
+                    player.armor.ArmorID = 3;
+                else
+                    player.armor.ArmorID = 1;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -727,6 +760,10 @@ namespace OOFinal
             {
                 textBox1.Text = "You manage to pass the Magistrate's performance test and do a great job making a little girl happy on her birthday." + Environment.NewLine +
                     "You take your extra gold and buy a nice set of gauntlets." + Environment.NewLine + "( Press continue to continue )";
+                if (player.armor.ArmorID == 2)
+                    player.armor.ArmorID = 3;
+                else
+                    player.armor.ArmorID = 1;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -742,7 +779,7 @@ namespace OOFinal
             {
                 textBox1.Text = "'Fine, you can have a week at most to gather your pitiful supplies and pride. " + Environment.NewLine +
                     " Well Kiddo, you better get some equipment so you don't die to Papa Long Johns. " + Environment.NewLine +
-                    "Maybe go help around the community for supplies?";
+                    "Maybe go help around the community for supplies?" + player.armor.ArmorID;
 
                 questCounter = 1;
 
