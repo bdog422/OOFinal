@@ -115,7 +115,7 @@ namespace OOFinal
                     player.armor.ArmorID = 3;
                 else
                     player.armor.ArmorID = 2;
-
+                player.Karma += 10;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -233,6 +233,11 @@ namespace OOFinal
                 textBox1.Text = "'Good job kid. I know how tough it can be on the streets. Don't worry, I won't tell anyone" +
                     "what you tried to do. Get out of here before it becomes and issue again.'" + Environment.NewLine +
                     "You escape the club with the dagger. You can now defend yourself from Papa Long Johns!" + Environment.NewLine + "(Press continue to continue)";
+                if (player.weapon.WeaponID == 2)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 1;
+                player.Karma -= 5;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -241,6 +246,7 @@ namespace OOFinal
                 textBox1.Text = "You try running but the bartender throws a mug at the back of your head." + Environment.NewLine +
                     "'This could have ended nicely but you had to play dumb.'" + Environment.NewLine + "He snatches everything" +
                     "out of your bag since you decided to be a stupid theif." + Environment.NewLine + "(Press continue to continue)";
+                player.Karma -= 10;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -249,6 +255,7 @@ namespace OOFinal
                 textBox1.Text = "You put everything back on the counter including the dagger." + Environment.NewLine +
                     "'You did a good thing kiddo. I know the temptation is hard to fight sometimes.'" + Environment.NewLine +
                     "You lost everything you worked for. Have fun not having a dagger to use dummy." + Environment.NewLine + "(Press continue to continue)";
+                player.Karma += 5;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -257,6 +264,11 @@ namespace OOFinal
                 textBox1.Text = "You are the first one to start sprinting after the gnomes. Since you acted quick on your feet" +
                     "nobody suspected you to be the thief all along." + Environment.NewLine + "You escape with the gold and dagger." +
                     "You now have a weapon to fight Papa Long Johns with!" + Environment.NewLine + "(Press continue to continue)";
+                if (player.weapon.WeaponID == 2)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 1;
+                player.Karma -= 10;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -264,6 +276,11 @@ namespace OOFinal
             {
                 textBox1.Text = "You leave an pick up your pack. Unfortunately someone stole some of the gold but left the dagger." +
                     Environment.NewLine + "At least you have a weapon now!" + Environment.NewLine + "(Press continue to continue)";
+                if (player.weapon.WeaponID == 2)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 1;
+                player.Karma -= 20;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -288,6 +305,11 @@ namespace OOFinal
                     "from the exchange of blows that follows." + Environment.NewLine + "Somehow you win, but took a major beating " +
                     "while doing so. Most of the people watching you are worried about your health for the coming days." + Environment.NewLine +
                     "at least you got a sick new dagger to fight Papa Long Johns with!" + Environment.NewLine + "(Press continue to continue)";
+                if (player.weapon.WeaponID == 2)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 1;
+                player.Karma += 10;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -297,6 +319,11 @@ namespace OOFinal
                     "There is no special reward for being a good person in a fist fight. You dip, duck, and doge each fist and throw your own." + Environment.NewLine +
                     "Somehow you defeat the last person and go home with all the winnings!" + Environment.NewLine +
                     "You now have a dagger to fight Papa Long Johns with!" + Environment.NewLine + "(Press continue to continue)";
+                if (player.weapon.WeaponID == 2)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 1;
+                player.Karma += 5;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -319,6 +346,7 @@ namespace OOFinal
                     "They don't seem happy that you tried to run off with the bet money..." + Environment.NewLine +
                     "Somehow, agaisnt all odds you survived the entire crowd gave you." + Environment.NewLine +
                     "After facing them, you could probably take on Papa Long Johns wearing nothing but your shorts." + Environment.NewLine + "( Press continue to continue )";
+                player.Karma -= 10;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -326,6 +354,7 @@ namespace OOFinal
             {
                 textBox1.Text = "You made the right call as the entire crowd outside comes back when you set the gold down." + Environment.NewLine +
                     "Looks like you get to live another day!" + Environment.NewLine + "( Press continue to continue )";
+                player.Karma -= 5;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -343,6 +372,11 @@ namespace OOFinal
                 textBox1.Text = "Momma didn't raise a sucker. You take what you earned and leave the club like nothing happened." + Environment.NewLine +
                     "The gold is a nice bonus but the real prize is the dagger. You now have a weapon to fight Papa Long Johns with."
                     + Environment.NewLine + "( Press continue to continue )";
+                if (player.weapon.WeaponID == 2)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 1;
+                player.Karma -= 20; ;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -450,6 +484,11 @@ namespace OOFinal
                     "It seems in the meantime Mr. Mittens caught two more fish!" + Environment.NewLine +
                     "You bring him back to the old lady no worse for wear and get a cool looking Ring of Strength!"
                     + Environment.NewLine + "( Press continue to continue )";
+                if (player.weapon.WeaponID == 1)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 2;
+                player.Karma = +30;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -459,6 +498,11 @@ namespace OOFinal
                     "He is furious that you got him wet and left multiple scraches on your arms and face." + Environment.NewLine +
                     "You're lucky you don't need medical attention. For all your troubles, the old lady gives you a Ring of Strength!"
                     + Environment.NewLine + "( Press continue to continue )";
+                if (player.weapon.WeaponID == 1)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 2;
+                player.Karma = +30;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -497,6 +541,11 @@ namespace OOFinal
                 textBox1.Text = "You try and search the area for Mr. Mittens and end up finding him in a dumpster." + Environment.NewLine +
                     "He smells atrocious as you drag him back to the old lady. She his happy you found him, but not happy about his stench." + Environment.NewLine +
                     "She hands you a Ring of Strength and tells you to run away since you still smell." + Environment.NewLine + "You feel like you could lift 10 men with this ring!" + Environment.NewLine + "( Press continue to continue )";
+                if (player.weapon.WeaponID == 1)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 2;
+                player.Karma = +30;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -506,6 +555,11 @@ namespace OOFinal
                     "You explain the situation and they agree to let you bring Mr. Mittens back home." + Environment.NewLine +
                     "The old lady is happy and decides that you deserve a reward. From her back pocket she gives you a " +
                     "Ring of Strength." + Environment.NewLine + "You feel like you could lift 10 men with this ring!" + Environment.NewLine + "( Press continue to continue )";
+                if (player.weapon.WeaponID == 1)
+                    player.weapon.WeaponID = 4;
+                else
+                    player.weapon.WeaponID = 2;
+                player.Karma = +30;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -522,6 +576,7 @@ namespace OOFinal
             {
                 textBox1.Text = "You're the boss.... It's a shame that this poor old lady won't ever see her cat again" + Environment.NewLine +
                     "It's actually super sad that nobody is helping her." + Environment.NewLine + "( Press continue to continue )";
+                player.Karma -= 20;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -562,10 +617,14 @@ namespace OOFinal
             }
             else if (questCounter + comboBox1.SelectedIndex == 62)
             {
+                Human troll = new Human(100, 20, 0, 0, 0);
+                Combat(player, troll);
                 textBox1.Text = "You actually run up to this troll like a professional boxer and somehow beat it into submission." + Environment.NewLine +
                     "I don't know how this was possible.... but you did it." + Environment.NewLine +
                     "You return to the wizard lady with the artifact covered in troll blood. She doesn't ask any questions, but gives you an odd glance." + Environment.NewLine
                     + "She gives you the Wisdom of the Ancients as a reward!" + Environment.NewLine + "( Press continue to continue )";
+                if (player.weapon.WeaponID == 0)
+                    player.weapon.WeaponID = 3;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -589,6 +648,8 @@ namespace OOFinal
                 textBox1.Text = "It's a good thing you threw a second rock. The troll was just about to come back to the artifact." + Environment.NewLine +
                     "Because of your tactical genius, you manage to grab the artifact and get back home safe and sound." + Environment.NewLine +
                     "The Wizard lady is proud of you and gives you the Wisdom of the Ancients as a reward!" + Environment.NewLine + "( Press continue to continue )";
+                if (player.weapon.WeaponID == 0)
+                    player.weapon.WeaponID = 3;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -596,6 +657,8 @@ namespace OOFinal
             {
                 textBox1.Text = "The troll was on its way back and chases you down the mountain. You get to the gates just in time for the town guards to fight it." + Environment.NewLine +
                     "You get the artifact back to the Wizard lady and she bestows upon you the Wisdom of the Ancients" + Environment.NewLine + "( Press continue to continue )";
+                if (player.weapon.WeaponID == 0)
+                    player.weapon.WeaponID = 3;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -697,6 +760,7 @@ namespace OOFinal
             {
                 textBox1.Text = "You manage to jump out of the window after the second attempt." + Environment.NewLine +
                     "Unfortuantly you didn't finish the job and don't get a reward because of it." + Environment.NewLine + "( Press continue to continue )";
+                player.Karma -= 20;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -704,8 +768,10 @@ namespace OOFinal
             {
                 textBox1.Text = "You crash into two guards who drag you to jail. They lock you up for a week." + Environment.NewLine +
                     "Just in time for your fight with Papa Long Johns!" + Environment.NewLine + "( Press continue to continue )";
+                player.Karma -= 20;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
+                Endings();
             }
             else if(questCounter + comboBox1.SelectedIndex == 78)
             {
@@ -730,7 +796,7 @@ namespace OOFinal
                     player.armor.ArmorID = 3;
                 else
                     player.armor.ArmorID = 1;
-
+                player.Karma -= 60;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -742,6 +808,7 @@ namespace OOFinal
                     player.armor.ArmorID = 3;
                 else
                     player.armor.ArmorID = 1;
+                player.Karma -= 60;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -753,6 +820,7 @@ namespace OOFinal
                     player.armor.ArmorID = 3;
                 else
                     player.armor.ArmorID = 1;
+                player.Karma += 50;
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
@@ -774,12 +842,16 @@ namespace OOFinal
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
+            else if(questCounter + comboBox1.SelectedIndex == 6)
+            {
+                Endings();
+            }
 
             else
             {
                 textBox1.Text = "'Fine, you can have a week at most to gather your pitiful supplies and pride. " + Environment.NewLine +
                     " Well Kiddo, you better get some equipment so you don't die to Papa Long Johns. " + Environment.NewLine +
-                    "Maybe go help around the community for supplies?" + player.armor.ArmorID;
+                    "Maybe go help around the community for supplies?" + player.Karma;
 
                 questCounter = 1;
 
@@ -794,11 +866,219 @@ namespace OOFinal
                 comboBox1.Items.Add("4. The magical artifact");
                 comboBox1.Items.Add("5. The Magistrate issue");
                 comboBox1.Items.Add("Go fight Papa Long Johns!");
+                
             }
             
         }
-        
-        
+
+        public int Combat(Human player, Human enemy)
+        {
+            FightForm bossFight = new FightForm();
+
+            MessageBox.Show("It's time to fight!");
+
+            CombatUpdate();
+
+            bossFight.FightBox1.Items.Add("1. Attack");
+            bossFight.FightBox1.Items.Add("2. Defend");
+
+            while(player.currentHealth > 0 && enemy.currentHealth > 0)
+            {
+                bossFight.ShowDialog();
+                fight();
+                CombatUpdate();
+
+                if (player.currentHealth > 0 && enemy.currentHealth <= 0)
+                {
+                    player.currentHealth = player.Health;
+                    return 1;
+                }
+                else if(player.currentHealth <= 0 && enemy.currentHealth > 0)
+                {
+                    MessageBox.Show("You died and lost the game.");
+                    Application.Exit();
+                    return 0;
+                }
+
+            }
+            return 2; // because visual studio gets mad when I don't do this.
+
+            void fight()
+            {
+                
+                if(enemy.currentHealth > 0 && bossFight.FightBox1.SelectedIndex == 0)
+                        enemy.currentHealth -= (player.Damage + player.weapon.AddedDamage - enemy.armor.AddedResistance - enemy.Resistance);
+
+                if (enemy.currentHealth > 0 && bossFight.FightBox1.SelectedIndex == 0)
+                    player.currentHealth -= (enemy.Damage + enemy.weapon.AddedDamage - player.Resistance - player.armor.AddedResistance);
+                else if(enemy.currentHealth > 0 && (bossFight.FightBox1.SelectedIndex == 1))
+                    player.currentHealth -= (enemy.Damage + enemy.weapon.AddedDamage - player.Resistance - player.armor.AddedResistance - 10);
+
+                return;
+            }
+
+            void CombatUpdate()
+            {
+                bossFight.PlayerHealth.Text = player.currentHealth.ToString();
+                bossFight.PlayerArmor.Text = player.armor.AddedResistance.ToString();
+                bossFight.PlayerWeapon.Text = player.weapon.AddedDamage.ToString();
+                bossFight.EnemyHealth.Text = enemy.currentHealth.ToString();
+                bossFight.EnemyArmor.Text = enemy.armor.AddedResistance.ToString();
+                bossFight.EnemyWeapon.Text = enemy.weapon.AddedDamage.ToString();
+            }
+
+        }
+
+        void Endings()
+        {
+            if (player.Karma == 0)
+            {
+                textBox1.Text = "While you wasted your time, Papa Long Johns got his gear and is about to demolish you.";
+                Human enemy = new Human(10, 20, 10, 3, 4);
+                Combat(player, enemy);
+            }
+
+            if (player.Karma > 0 && player.Karma < 50)
+            {
+                textBox1.Text = "You arrive to the fight location to find Papa Long Johns waiting for you." + Environment.NewLine +
+                    "The town has little interest in what happens.";
+
+                Human enemy = new Human(10, 20, 10, 2, 0);
+                Combat(player, enemy);
+
+                textBox1.Text = "You take down Papa Long Johns easily and effieciently. Now you have to decide if you want to spare him.";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Kill him");
+                comboBox1.Items.Add("2. Spare him");
+
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBox1.Text = "You kill the man how threatened your life when you first entered town. You feel justified.";
+                    MessageBox.Show("You beat the game and got ending 2!");
+                    Application.Exit();
+                }
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBox1.Text = "You spared his life even though he threatened to take your own. You are a good person.";
+                    MessageBox.Show("You beat the game and got ending 2!");
+                    Application.Exit();
+                }
+            }
+            else if (player.Karma > 50 && player.Karma < 100)
+            {
+                textBox1.Text = "You arrive to the fight location to find Papa Long Johns waiting for you." + Environment.NewLine +
+                    "The town rallies behind you in support.";
+
+                Human enemy = new Human(10, 20, 10, 2, 0);
+                Combat(player, enemy);
+
+                textBox1.Text = "You take down Papa Long Johns easily and effieciently. Now you have to decide if you want to spare him.";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Kill him");
+                comboBox1.Items.Add("2. Spare him");
+
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBox1.Text = "You kill the man who threatened your life. The town is dissapointed, but understanding of your actions.";
+                    MessageBox.Show("You beat the game and got ending 3!");
+                    Application.Exit();
+                }
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBox1.Text = "You spare his life and the town praises you for your generosity!";
+                    MessageBox.Show("You beat the game and got ending 3!");
+                    Application.Exit();
+                }
+            }
+            else if(player.Karma == 100)
+            {
+                textBox1.Text = "You arrive to the fight location with the entire town behind you. They throw out Papa Long Johns by force, saving you the trouble." + Environment.NewLine +
+                    "You have become a true hero to these people.";
+                MessageBox.Show("You beat the game and got ending 4!");
+                Application.Exit();
+            }
+            else if (player.Karma < 0 && player.Karma > -50)
+            {
+                textBox1.Text = "You arrive to the fight location to find Papa Long Johns waiting for you." + Environment.NewLine +
+                    "The town doesn't care for the outcome.";
+
+                Human enemy = new Human(10, 20, 10, 2, 0);
+                Combat(player, enemy);
+
+                textBox1.Text = "You take down Papa Long Johns easily and effieciently. Should you take his pitiful life?";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Kill him");
+                comboBox1.Items.Add("2. Spare him");
+
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBox1.Text = "You quickly take the man's head off. People should know their place.";
+                    MessageBox.Show("You beat the game and got ending 5!");
+                    Application.Exit();
+                }
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBox1.Text = "For some odd reason you are compelled to spare him, But you make sure he won't walk correctly ever again.";
+                    MessageBox.Show("You beat the game and got ending 5!");
+                    Application.Exit();
+                }
+            }
+            else if (player.Karma <=-50 && player.Karma > -100)
+            {
+                textBox1.Text = "You arrive to the fight location to find Papa Long Johns waiting for you." + Environment.NewLine +
+                    "The town rallies behind Papa Long Johns.";
+
+                Human enemy = new Human(10, 20, 10, 2, 0);
+                Combat(player, enemy);
+
+                textBox1.Text = "You take down Papa Long Johns easily and effieciently. Now you have to decide if you want to spare him.";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Kill him");
+                comboBox1.Items.Add("2. Spare him");
+
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBox1.Text = "You drag out his screams as the crowd watches. Let this be a lesson to anyone who dare challenges you.";
+                    MessageBox.Show("You beat the game and got ending 6!");
+                    Application.Exit();
+                }
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBox1.Text = "You observe this pathetic waste of a man in front of you and decided that his shame will be his punishment.";
+                    MessageBox.Show("You beat the game and got ending 6!");
+                    Application.Exit();
+                }
+            }
+            else if(player.Karma == -100)
+            {
+                textBox1.Text = "You find Papa Long Johns in the dead of night as he walks back from a pub." + Environment.NewLine +
+                    "You blindside him while he is lost in his own thoughts. Slowly but surely you whittle down his pitiful defenses." + Environment.NewLine +
+                    "The entire town wakes up to see the commotion. Finally you deal the killing blow as the crowd cowers before you." + Environment.NewLine +
+                    "You have become something out of nightmares.";
+                MessageBox.Show("You beat the game and got ending 7!");
+                Application.Exit();
+            }
+        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -813,7 +1093,12 @@ namespace OOFinal
         {
             if(comboBox1.SelectedIndex == 0  && placement == 0)
             {
-                // Fight time
+                Human enemy = new Human(10,10,10,0,1);
+                if( Combat(player, enemy) == 1)
+                {
+                    MessageBox.Show("You beat the game and got ending 1!");
+                    Application.Exit();
+                }
             }
 
             else if(comboBox1.SelectedIndex == 1 && placement == 0)

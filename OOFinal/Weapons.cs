@@ -15,7 +15,12 @@ namespace Engine
         public void WeaponStats(int ID)
         {
             WeaponID = ID;
-            if(ID == 1)
+            if(ID == 0)
+            {
+                WeaponName = "None";
+                AddedDamage = 0;
+            }
+            if (ID == 1)
             {
                 WeaponName = "Dagger";
                 AddedDamage = 20;
@@ -30,7 +35,7 @@ namespace Engine
                 WeaponName = "Wisdom of the Ancients";
                 AddedDamage = 10;
             }
-            if(ID == 3)
+            if(ID == 4)
             {
                 WeaponName = "Total Package";
                 AddedDamage = 70;
