@@ -505,6 +505,89 @@ namespace OOFinal
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
+            ///////// End of quest 4
+
+            else if(questCounter + comboBox1.SelectedIndex == 4)
+            {
+                textBox1.Text = "A mystical, magical, and strange looking wizard lady asks for you to travel" +
+                    "into the snowy mountians to find a magical artifact." + Environment.NewLine +
+                    "Are you willing to embark on this dangerous quest?";
+
+                questCounter = 60;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Hell yeah! Magical artifacts are cool!");
+                comboBox1.Items.Add("2. No. The snowy mountains have scary trolls.");
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 60)
+            {
+                textBox1.Text = "You accept her offer and sprint off to the mountains. You love adventure and cannot wait" +
+                    "to find this artifact." + Environment.NewLine + "Oh no! You finally find the artifact after hours of searching" +
+                    " ,but it seems a frost troll is guarding it." + Environment.NewLine + "What do you do now?";
+
+                questCounter = 62;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Kill the troll");
+                comboBox1.Items.Add("2. Lure it away");
+                comboBox1.Items.Add("3. Go back home");
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 62)
+            {
+                textBox1.Text = "You actually run up to this troll like a professional boxer and somehow beat it into submission." + Environment.NewLine +
+                    "I don't know how this was possible.... but you did it." + Environment.NewLine +
+                    "You return to the wizard lady with the artifact covered in troll blood. She doesn't ask any questions, but gives you an odd glance." + Environment.NewLine
+                    + "She gives you the Wisdom of the Ancients as a reward!" + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 63)
+            {
+                textBox1.Text = "You throw some rocks in the other direction. Hopefully the troll is fooled for long enough." + Environment.NewLine +
+                    "Should you just grab the artifact, or throw another rock and grab it?";
+
+                questCounter = 65;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Throw another rock and grab the artifact.");
+                comboBox1.Items.Add("2. Grab the artifact and run.");
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 65)
+            {
+                textBox1.Text = "It's a good thing you threw a second rock. The troll was just about to come back to the artifact." + Environment.NewLine +
+                    "Because of your tactical genius, you manage to grab the artifact and get back home safe and sound." + Environment.NewLine +
+                    "The Wizard lady is proud of you and gives you the Wisdom of the Ancients as a reward!" + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 66)
+            {
+                textBox1.Text = "The troll was on its way back and chases you down the mountain. You get to the gates just in time for the town guards to fight it." + Environment.NewLine +
+                    "You get the artifact back to the Wizard lady and she bestows upon you the Wisdom of the Ancients" + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 64)
+            {
+                textBox1.Text = "Fighting a frost troll was not on the list of how you wanted to die." + Environment.NewLine +
+                    "You go home to live another day." + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+
+            ///////// End of quest 4
 
             else
             {
