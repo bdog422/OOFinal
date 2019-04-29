@@ -509,8 +509,8 @@ namespace OOFinal
 
             else if (questCounter + comboBox1.SelectedIndex == 4)
             {
-                textBox1.Text = "A mystical, magical, and strange looking wizard lady asks for you to travel" +
-                    "into the snowy mountians to find a magical artifact." + Environment.NewLine +
+                textBox1.Text = "A mystical, magical, and strange looking wizard lady asks for you to travel " +
+                    "into the snowy mountains to find a magical artifact." + Environment.NewLine +
                     "Are you willing to embark on this dangerous quest?";
 
                 questCounter = 60;
