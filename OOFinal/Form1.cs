@@ -327,6 +327,185 @@ namespace OOFinal
                 comboBox1.SelectedIndex = -1;
             }
 
+
+            ///////////////////// End quest 2
+
+            else if(questCounter + comboBox1.SelectedIndex == 3)
+            {
+                textBox1.Text = "Oh no, it seems that an elderly lady is searching for her lost cat." + Environment.NewLine +
+                    "Do you want to help her?";
+
+                questCounter = 40;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. As a good citizen, you must help this lady!");
+                comboBox1.Items.Add("2. Uh.... no. You have much larger problems to handle.");
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 40)
+            {
+                textBox1.Text = "What is the best course of action?";
+
+                questCounter = 42;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Sprint off in another direction.");
+                comboBox1.Items.Add("2. Ask the lady where she last saw her cat");
+
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 43)
+            {
+                textBox1.Text = "'I last saw Mr. Mittens around the local pub. I hope he is doing alright!'" + Environment.NewLine +
+                    "After giving you one sentence of information, the lady faints for some story related reason." + Environment.NewLine +
+                    "Looks like you better search near the pub!";
+
+                questCounter = 44;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Ask inside the pub if someone has seen Mr. Mittens.");
+                comboBox1.Items.Add("2. Search around the pub for Mr. Mittens.");
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 45)
+            {
+                textBox1.Text = "It seems something has been causing some trouble in this area." + Environment.NewLine +
+                    "There are a bunch of fish skeletons and crying children with scratches on their faces." + Environment.NewLine +
+                    "This could be a collection of clues!";
+
+                questCounter = 46;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Follow the trail of scratched kids.");
+                comboBox1.Items.Add("2. Follow the trail of fish skeletons.");
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 47)
+            {
+                textBox1.Text = "You follow the skeletons to the local river." + Environment.NewLine +
+                    "It seems that Mr. Mittens has somehow traveled across the river and is swiping fish while they swim on by." + Environment.NewLine +
+                    "What do you do now?";
+
+                questCounter = 50;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Cross the river to get Mr. Mittens.");
+                comboBox1.Items.Add("2. Tell the old lady you found her dumb cat.");
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 50)
+            {
+                textBox1.Text = "Wait, how the hell did this cat get over there. There is no bridge or path!" + Environment.NewLine +
+                    "How do you get across?";
+
+                questCounter = 52;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Swim?");
+                comboBox1.Items.Add("2. Find a path to walk?");
+
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 53)
+            {
+                textBox1.Text = "It took 20 minutes, but you finally found an area you could safely walk across." + Environment.NewLine +
+                    "It seems in the meantime Mr. Mittens caught two more fish!" + Environment.NewLine +
+                    "You bring him back to the old lady no worse for wear and get a cool looking Ring of Strength!"
+                    + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 52)
+            {
+                textBox1.Text = "You swim across the river and get soaking wet. You manage to get Mr. Mittens and bring him to the other side." + Environment.NewLine +
+                    "He is furious that you got him wet and left multiple scraches on your arms and face." + Environment.NewLine +
+                    "You're lucky you don't need medical attention. For all your troubles, the old lady gives you a Ring of Strength!"
+                    + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 51)
+            {
+                textBox1.Text = "While she is happy you found her cat, she isn't happy that you left him on the other side of a river." + Environment.NewLine +
+                    "If you tried a little harder you could have gotten a reward, but you decided to be lazy instead."
+                    + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 46)
+            {
+                textBox1.Text = "As it turns out, some random freak was running around town scratching the children..." + Environment.NewLine +
+                    "Don't worry though, the person is already in jail but that means this was a dead end.";
+
+                questCounter = 48;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Try and find Mr. Mittens from here?.");
+                comboBox1.Items.Add("2. Quit while you still have your sanity.");
+            }
+            else if (questCounter + comboBox1.SelectedIndex == 49)
+            {
+                textBox1.Text = "This may have been a wise choice in the long run." + Environment.NewLine +
+                    "You no longer have to worry about sad old ladies or crazy cats" + Environment.NewLine + "You feel like you could lift 10 men with this ring!" + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 48)
+            {
+                textBox1.Text = "You try and search the area for Mr. Mittens and end up finding him in a dumpster." + Environment.NewLine +
+                    "He smells atrocious as you drag him back to the old lady. She his happy you found him, but not happy about his stench." + Environment.NewLine +
+                    "She hands you a Ring of Strength and tells you to run away since you still smell." + Environment.NewLine + "You feel like you could lift 10 men with this ring!" + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if (questCounter + comboBox1.SelectedIndex == 44)
+            {
+                textBox1.Text = "As it turns out, Mr. Mittens is the center of attention in the pub!" + Environment.NewLine +
+                    "You explain the situation and they agree to let you bring Mr. Mittens back home." + Environment.NewLine +
+                    "The old lady is happy and decides that you deserve a reward. From her back pocket she gives you a " +
+                    "Ring of Strength." + Environment.NewLine + "You feel like you could lift 10 men with this ring!" + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 42)
+            {
+                textBox1.Text = "It's obvious that the cat isn't in this area!" + Environment.NewLine +
+                    "Well smart guy, you tried running off to some distant land to find her cat." + Environment.NewLine +
+                    "It's a shame you didn't use all the information at your disposal." + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+
+            else if(questCounter + comboBox1.SelectedIndex == 41)
+            {
+                textBox1.Text = "You're the boss.... It's a shame that this poor old lady won't ever see her cat again" + Environment.NewLine +
+                    "It's actually super sad that nobody is helping her." + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+
             else
             {
                 textBox1.Text = "'Fine, you can have a week at most to gather your pitiful supplies and pride. " + Environment.NewLine +
