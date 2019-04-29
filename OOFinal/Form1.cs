@@ -138,6 +138,194 @@ namespace OOFinal
                 questCounter = 1;
                 comboBox1.SelectedIndex = -1;
             }
+            // end of quest 1
+            else if(questCounter + comboBox1.SelectedIndex == 2)
+            {
+                textBox1.Text = "You walk into the local fight club and see a mountain of gold sitting on the table." + Environment.NewLine +
+                    "It seems like only the bartender can see you..." + Environment.NewLine +
+                    "What do you do?";
+                questCounter = 20;
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+
+
+                comboBox1.Items.Add("1. Get the bartender to look away and steal the gold.");
+                comboBox1.Items.Add("2. Enter the fight club to win the gold");
+                comboBox1.Items.Add("3. Take the gold right in front of the bartender.");
+                comboBox1.Items.Add("4. Walk out of the establisment.");
+
+            }
+            
+            else if(questCounter + comboBox1.SelectedIndex == 20)
+            {
+                textBox1.Text = "You scream 'LOOK AT THAT GNOME' and point at an empty chair. The bartender starts walking" +
+                    "where you pointed at in confusion." + Environment.NewLine + "You put as much gold into your pack as" +
+                    "possible and also grab an ornate dagger." + Environment.NewLine + "What is your next plan?";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+                questCounter = 24;
+
+                comboBox1.Items.Add("1. Leave the club with your 'Winnings'.");
+                comboBox1.Items.Add("2. Stash your loot somewhere outside and come back.");
+                comboBox1.Items.Add("3. Stay right where you are.");
+
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 25)
+            {
+                textBox1.Text = "You sneak outside and kick some dirt over your pack. You rush back inside like nothing " +
+                    "happens and start to observe the fight." + Environment.NewLine + "Soon you hear the bartender screaming" +
+                    "'Someone snatched the bet money!'" + Environment.NewLine + "Everyone rushes inside to see the commotion." +
+                    " The local guards come inside to search people to see who stole the money. Good thing you stashed the " +
+                    "loot or you would have been caught." + Environment.NewLine + "All of a sudden, 3 Gnomes jump out of a trench" +
+                    "coat and start running away!" + Environment.NewLine + "What do you do?";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+                questCounter = 27;
+
+                comboBox1.Items.Add("1. Go after the Gnomes.");
+                comboBox1.Items.Add("2. This is not your problem.");
+
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 26)
+            {
+                textBox1.Text = "The bartender stares at you, then at the missing pile of gold." + Environment.NewLine + "'Listen" +
+                    " kid, you can put all the bet winnings back and I'll let you go.'" + Environment.NewLine +
+                    "What do you do?";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+                questCounter = 29;
+
+                comboBox1.Items.Add("1. Listen to the nice man.");
+                comboBox1.Items.Add("2. Run as fast as you can.");
+                comboBox1.Items.Add("3. Put everything back but the dagger");
+
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 31)
+            {
+                textBox1.Text = "'Good job kid. I know how tough it can be on the streets. Don't worry, I won't tell anyone" +
+                    "what you tried to do. Get out of here before it becomes and issue again.'" + Environment.NewLine + 
+                    "You escape the club with the dagger. You can now defend yourself from Papa Long Johns!" + Environment.NewLine + "(Press continue to continue)";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if (questCounter + comboBox1.SelectedIndex == 30)
+            {
+                textBox1.Text = "You try running but the bartender throws a mug at the back of your head." + Environment.NewLine +
+                    "'This could have ended nicely but you had to play dumb.'" + Environment.NewLine + "He snatches everything" +
+                    "out of your bag since you decided to be a stupid theif." + Environment.NewLine + "(Press continue to continue)";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 29)
+            {
+                textBox1.Text = "You put everything back on the counter including the dagger." + Environment.NewLine +
+                    "'You did a good thing kiddo. I know the temptation is hard to fight sometimes.'" + Environment.NewLine +
+                    "You lost everything you worked for. Have fun not having a dagger to use dummy." + Environment.NewLine + "(Press continue to continue)";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 27)
+            {
+                textBox1.Text = "You are the first one to start sprinting after the gnomes. Since you acted quick on your feet" +
+                    "nobody suspected you to be the thief all along." + Environment.NewLine + "You escape with the gold and dagger." +
+                    "You now have a weapon to fight Papa Long Johns with!" + Environment.NewLine + "(Press continue to continue)";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if (questCounter + comboBox1.SelectedIndex == 28)
+            {
+                textBox1.Text = "You leave an pick up your pack. Unfortunately someone stole some of the gold but left the dagger." +
+                    Environment.NewLine + "At least you have a weapon now!" + Environment.NewLine + "(Press continue to continue)";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+
+            else if (questCounter + comboBox1.SelectedIndex == 21)
+            {
+                textBox1.Text = "You decide to enter the fight club. Good thing you were raised on the streets" +
+                               "and know how to fight." + Environment.NewLine + "Do you want to fight to win, or fight honorably?";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+                questCounter = 32;
+
+                comboBox1.Items.Add("1. Fight honorably?");
+                comboBox1.Items.Add("2. Fight dirty?");
+                
+            }
+            else if (questCounter + comboBox1.SelectedIndex == 32)
+            {
+                textBox1.Text = "You decide that the best way to fight these people is on equal footing. You gain nothing" +
+                    "from the exchange of blows that follows." + Environment.NewLine + "Somehow you win, but took a major beating " +
+                    "while doing so. Most of the people watching you are worried about your health for the coming days." + Environment.NewLine +
+                    "at least you got a sick new dagger to fight Papa Long Johns with!" + Environment.NewLine + "(Press continue to continue)";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 33)
+            {
+                textBox1.Text = "Fighting honorably is a fool's errand that gets people killed more than it saves your pride." + Environment.NewLine +
+                    "There is no special reward for being a good person in a fist fight. You dip, duck, and doge each fist and throw your own." + Environment.NewLine +
+                    "Somehow you defeat the last person and go home with all the winnings!" + Environment.NewLine +
+                    "You now have a dagger to fight Papa Long Johns with!" + Environment.NewLine + "(Press continue to continue)";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 22)
+            {
+                textBox1.Text = "'Kid, I'll give you one chance to put that gold back before I get the entire club in here to take it " +
+                    "back by force.'" + Environment.NewLine + "He saw you pocket the gold. What do you do now?";
+
+                comboBox1.Items.Clear();
+                comboBox1.Update();
+                comboBox1.ResetText();
+                questCounter = 34;
+
+                comboBox1.Items.Add("1. Call him a fat fairy and run away.");
+                comboBox1.Items.Add("2. Put the gold back to avoid possible death");
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 34)
+            {
+                textBox1.Text = "As you shout your insult and run you crash into the crowd that was outside a moment ago." + Environment.NewLine +
+                    "They don't seem happy that you tried to run off with the bet money..." + Environment.NewLine +
+                    "Somehow, agaisnt all odds you survived the entire crowd gave you." + Environment.NewLine +
+                    "After facing them, you could probably take on Papa Long Johns wearing nothing but your shorts." + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 35)
+            {
+                textBox1.Text = "You made the right call as the entire crowd outside comes back when you set the gold down." + Environment.NewLine +
+                    "Looks like you get to live another day!" + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+            else if(questCounter + comboBox1.SelectedIndex == 23)
+            {
+                textBox1.Text = "Stealing and violence will not solve your issues." + Environment.NewLine +
+                    "You decide that tomorrow is another day to make money." + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
+
+
+            else if(questCounter + comboBox1.SelectedIndex == 24)
+            {
+                textBox1.Text = "Momma didn't raise a sucker. You take what you earned and leave the club like nothing happened." + Environment.NewLine +
+                    "The gold is a nice bonus but the real prize is the dagger. You now have a weapon to fight Papa Long Johns with."
+                    + Environment.NewLine + "( Press continue to continue )";
+                questCounter = 1;
+                comboBox1.SelectedIndex = -1;
+            }
 
             else
             {
