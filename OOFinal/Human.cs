@@ -11,17 +11,15 @@ namespace Engine
         public int Resistance { get; set; }
         public int currentHealth { get; set; }
         public Armor armor;
-        public Weapons weapon;
+        public Weapon weapon;
 
 
         public Human(int Health, int Damage, int Resistance, int ArmorID, int WeaponID)
         {
             this.Damage = Damage;
             this.Resistance = Resistance;
-            armor = new Armor();
-            weapon = new Weapons();
-            armor.ArmorStats(ArmorID);
-            weapon.WeaponStats(WeaponID);
+            armor = new Armor(ArmorID);
+            weapon = new Weapon(WeaponID);
             currentHealth = Health;
         }
 

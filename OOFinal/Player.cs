@@ -13,9 +13,7 @@ namespace Engine
 
         public Player(int Health, int Damage, int Resistance, int ArmorID, int WeaponID) : base(Health, Damage, Resistance, ArmorID, WeaponID)
         {
-            Karma = 0;
-            Damage = 20;
-            Resistance = 10;
+            Karma = 0;          
         }
     }
 }

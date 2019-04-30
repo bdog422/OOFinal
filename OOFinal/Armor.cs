@@ -12,7 +12,7 @@ namespace Engine
         public int AddedResistance { get; set; }
 
 
-        public void ArmorStats(int ID)
+        public Armor(int ID)
         {
             ArmorID = ID;
             if(ID == 0)

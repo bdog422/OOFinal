@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Weapons
+    public class Weapon
     {
         public string WeaponName { get; set; }
         public int WeaponID { get; set; }
         public int AddedDamage { get; set; }
 
-        public void WeaponStats(int ID)
+        public Weapon(int ID)
         {
             WeaponID = ID;
             if(ID == 0)
